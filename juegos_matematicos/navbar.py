@@ -12,7 +12,7 @@ def link_icon(link:str, icon_name:str) -> rx.Component:
 def navbar() -> rx.Component:
     return rx.hstack(
             rx.heading(
-                "JUEGOMATETICA",
+                "JUEGOMATEMATICA",
                 justify="start",
                 margin="20px 10px",
                 width="80%"
