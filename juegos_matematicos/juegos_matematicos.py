@@ -3,14 +3,17 @@
 import reflex as rx
 from juegos_matematicos.style import (body,contenedor__juegos__style, heading_style,
                                         list_reglas, button_play_style, link_style)
+from juegos_matematicos.routes import Routers
 from juegos_matematicos.navbar import navbar
+from juegos_matematicos.sistemas_de_ecuaciones import ecuaciones_y_frutas
 
-def contenedor_juegos (regla1:str,regla2:str,
+def contenedor_juegos (titulo:str,
+                        regla1:str,regla2:str,
                         regla3:str,tiempo:str,
                         enlace:str) -> rx.Component:
     return rx.box(
         rx.heading(
-            "Ecuaciones y Frutas 🍏"
+            titulo
         ),
         rx.text(
             "Reglas",
@@ -41,19 +44,21 @@ def juegos_descripcion() ->rx.Component:
             rx.heading("Juegos matematicos", style=heading_style),
             rx.hstack(
                 contenedor_juegos(
+                    titulo="Ecuaciones y Frutas 🍏",
                     regla1="Se presentan ecuaciones con frutas (🍊,🍎,🍓,etc)",
                     regla2="Cada figura representa un numero desconocido",
                     regla3="Debes usar las ecuaciones para descubrir su valor",
                     tiempo="Solo tienes 20segundos para encontrar la respuesta correcta",
-                    enlace="https://youtube.com"
+                    enlace=Routers.ECUACIONES_Y_FRUTAS.value
                 ),
                 contenedor_juegos(
-                regla1="Se presentan ecuaciones con frutas (🍊,🍎,🍓,etc)",
-                regla2="Cada figura representa un numero desconocido",
-                regla3="Debes usar las ecuaciones para descubrir su valor",
-                tiempo="Solo tienes 20segundos para encontrar la respuesta correcta",
-                enlace="https://youtube.com"
-            )
+                    titulo="Encuentra el patron",
+                    regla1="Se muestra una secuencia de numeros",
+                    regla2="Debes identificar el patron que sigue",
+                    regla3="encuentra el siguiente numero",
+                    tiempo="Solo tienes 30segundos para completar la secuencia",
+                    enlace=Routers.ENCUENTRA_EL_PATRON.value
+                )
             ),
             margin="100px 0",
             justify="center",
@@ -72,3 +77,4 @@ def index() -> rx.Component:
 
 app = rx.App()
 app.add_page(index)
+app.add_page(ecuaciones_y_frutas)

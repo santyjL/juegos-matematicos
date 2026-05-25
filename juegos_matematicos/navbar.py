@@ -11,20 +11,22 @@ def link_icon(link:str, icon_name:str) -> rx.Component:
 
 def navbar() -> rx.Component:
     return rx.hstack(
+        rx.link(
             rx.heading(
                 "JUEGOMATEMATICA",
                 justify="start",
                 margin="20px 10px",
-                width="75%"
             ),
-            rx.box(
-                link_icon(link="http://localhost:3000", icon_name="calendar"),
-                link_icon(link="http://localhost:3000", icon_name="calendar"),
-                link_icon(link="http://localhost:3000", icon_name="calendar"),
-                link_icon(link="http://localhost:3000", icon_name="calendar"),
-                link_icon(link="http://localhost:3000", icon_name="calendar"),
-                justify="end",
-            ),
-            style=navbar__component
+            color="#fff",
+            href="/",
+            width="85%",
+            _hover="#fff"
         ),
+        rx.box(
+            link_icon(link="http://localhost:3000", icon_name="calendar"),
+            link_icon(link="http://localhost:3000", icon_name="calendar"),
+            justify="end",
+        ),
+        style=navbar__component
+    )
         
