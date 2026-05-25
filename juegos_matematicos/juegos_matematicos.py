@@ -2,13 +2,12 @@
 
 import reflex as rx
 from juegos_matematicos.style import body
-class State(rx.State):
-    """The app state."""
-
+from juegos_matematicos.navbar import navbar
 
 def index() -> rx.Component:
     # Welcome Page (Index)
     return rx.container(
+        navbar(),
         style=body
         
     )
