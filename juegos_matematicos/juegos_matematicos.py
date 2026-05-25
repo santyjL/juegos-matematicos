@@ -6,6 +6,7 @@ from juegos_matematicos.style import (body,contenedor__juegos__style, heading_st
 from juegos_matematicos.routes import Routers
 from juegos_matematicos.navbar import navbar
 from juegos_matematicos.sistemas_de_ecuaciones import ecuaciones_y_frutas
+from juegos_matematicos.sucesiones import encuentra_el_patron
 
 def contenedor_juegos (titulo:str,
                         regla1:str,regla2:str,
@@ -78,3 +79,4 @@ def index() -> rx.Component:
 app = rx.App()
 app.add_page(index)
 app.add_page(ecuaciones_y_frutas)
+app.add_page(encuentra_el_patron)
