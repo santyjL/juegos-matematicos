@@ -1,7 +1,7 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
 
 import reflex as rx
-
+from juegos_matematicos.style import body
 class State(rx.State):
     """The app state."""
 
@@ -9,6 +9,7 @@ class State(rx.State):
 def index() -> rx.Component:
     # Welcome Page (Index)
     return rx.container(
+        style=body
         
     )
 
