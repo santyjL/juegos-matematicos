@@ -15,7 +15,7 @@ def navbar() -> rx.Component:
                 "JUEGOMATEMATICA",
                 justify="start",
                 margin="20px 10px",
-                width="80%"
+                width="75%"
             ),
             rx.box(
                 link_icon(link="http://localhost:3000", icon_name="calendar"),
