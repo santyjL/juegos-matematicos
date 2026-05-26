@@ -1,13 +1,7 @@
-from turtle import width
 import reflex as rx
-from juegos_matematicos.style import navbar__component,icon_style
 
-def link_icon(link:str, icon_name:str) -> rx.Component:
-    return rx.link(
-        rx.icon(icon_name),
-        href=link,
-        style=icon_style
-    )
+from juegos_matematicos.style import icon_style, navbar__component
+
 
 def navbar() -> rx.Component:
     return rx.hstack(
@@ -19,14 +13,8 @@ def navbar() -> rx.Component:
             ),
             color="#fff",
             href="/",
-            width="85%",
-            _hover="#fff"
+            width="100%",
+            _hover={"color": "#fff"},
         ),
-        rx.box(
-            link_icon(link="http://localhost:3000", icon_name="calendar"),
-            link_icon(link="http://localhost:3000", icon_name="calendar"),
-            justify="end",
-        ),
-        style=navbar__component
+        style=navbar__component,
     )
-        
