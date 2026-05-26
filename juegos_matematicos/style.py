@@ -1,9 +1,4 @@
-from tkinter import N
-from typing import Any
-
-
 from enum import Enum
-from turtle import right, width
 
 class Colores(Enum):
     BACKGROUND="#eef"
@@ -102,4 +97,25 @@ link_style=dict[str,str](
     width="100%",
     display="inline-block",
     _hover={"color" : "#48e"}
+)
+
+caja_de_juego_style=dict[str,str](
+    width="90%",
+    height="70vh",
+    margin="auto",
+    padding="10px",
+    margin_top="80px",
+    border_radius="20px",
+    align_items="center",
+    background=Colores.COLOR_CONTENEDORES.value
+)
+
+caja_ecuacion_style=dict[str,str](
+    background=Colores.BACKGROUND.value,
+    width="50px",
+    height="50px",
+    font_size="2em",
+    color=Colores.COLOR_CONTENEDORES.value,
+    margin="7px 7px",
+    text_align="center",
 )
