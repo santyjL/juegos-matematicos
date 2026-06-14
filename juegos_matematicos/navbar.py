@@ -1,6 +1,6 @@
 import reflex as rx
 
-from juegos_matematicos.style import icon_style, navbar__component
+from juegos_matematicos.style import navbar__component, navbar_title_style
 
 
 def navbar() -> rx.Component:
@@ -9,7 +9,7 @@ def navbar() -> rx.Component:
             rx.heading(
                 "JUEGOMATEMATICA",
                 justify="start",
-                margin="20px 10px",
+                style=navbar_title_style,
             ),
             color="#fff",
             href="/",
