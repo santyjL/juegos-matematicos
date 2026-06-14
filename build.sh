@@ -4,7 +4,7 @@ pip install -r requirements.txt
 rm -rf public
 
 reflex init
-reflex export --frontend-only
+REFLEX_API_URL=https://juegos-matematicos-production.up.railway.app reflex export --frontend-only
 unzip frontend.zip -d public
 rm -f frontend.zip
 deactivate
