@@ -1,0 +1,5 @@
+assets/
+.web
+__pycache__/
+.states
+.venv/
